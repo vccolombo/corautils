@@ -1,0 +1,4 @@
+[submodule "corautils/coreutils"]
+	path = corautils/coreutils
+	url = https://github.com/vccolombo/coreutils
+	branch = my-mv
