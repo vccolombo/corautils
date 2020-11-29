@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# get directory of this executable and append it to PATH
+# this is necessary to execute whatismyip if not installed locally
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export PATH="$PATH:$DIR"
+
+# get public IP
+IP=$(whatismyip)
+
+# create ssh-log folder if not exist
+mkdir -p ~/.ssh-log/
+
+# TODO: standardize date format
+echo "$(date): ssh $@ | current IP $IP" >> ~/.ssh-log/log
+
+# establish SSH session
+ssh "$@"
+
+echo "$(date): Finishing ssh session: ssh $@" >> ~/.ssh-log/log
