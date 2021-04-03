@@ -7,9 +7,8 @@
 	st = status -sb
 	gl = config --global -l
 	last = log -1 HEAD --stat
+	pr = pull --rebase=merges --autostash
 [core]
 	pager = less -FRX
-[pull]
-	rebase = true
 [fetch]
 	prune = true
