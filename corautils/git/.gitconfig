@@ -3,8 +3,13 @@
 	name = Victor Colombo
 [alias]
 	uncommit = reset HEAD^
-	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	lg = log --abbrev-commit -30 --graph --pretty=format:\"%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)%Creset %C(bold blue)[%an]%Creset\"
 	st = status -sb
 	gl = config --global -l
+	last = log -1 HEAD --stat
 [core]
 	pager = less -FRX
+[pull]
+	rebase = true
+[fetch]
+	prune = true
