@@ -27,3 +27,7 @@ A script to compile buffer overflow test programs easily.
 ## .gdbinit
 
 Append this to your ~/.gdbinit. It makes debuggin in gdb more similar to the real environment.
+
+## git
+
+My .gitconfig file
