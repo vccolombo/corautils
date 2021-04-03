@@ -23,3 +23,7 @@ Useful to compare with the logs in the remote machine for suspicious connections
 ## gcc-bof
 
 A script to compile buffer overflow test programs easily.
+
+## .gdbinit
+
+Append this to your ~/.gdbinit. It makes debuggin in gdb more similar to the real environment.
