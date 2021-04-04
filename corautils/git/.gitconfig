@@ -2,25 +2,27 @@
 	; email = 
 	name = Victor Colombo
 [alias]
-	uncommit = reset HEAD^
 	lg = log --graph --pretty=format:\"%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)%Creset %C(bold blue)[%an]%Creset\"
-	st = status -sb
-	gl = config --global -l
+	s = status -sb
 	last = log -1 HEAD --stat
 	pr = pull --rebase=merges --autostash
 	done = push origin HEAD
 	del = branch -d
 	co = checkout
 	cob = checkout -b
+	a = add -p
+	acm = !git add -A && git commit -m
+	c = commit --verbose
+	cm = commit -m
+	ca = commit -a --verbose
+	cam = commit -a -m
+	amend = commit -a --amend --verbose
+	save = !git add -A && git commit -m "WIP"
+	undo = reset HEAD^
 	d = diff
 	ds = diff --stat
     dc = diff --cached
-	a = add -p
-	all = add -A
-	cm = commit -m
-	cam = commit -a -m
-	amend = commit -a --amend --verbose
-	rao = remote add origin
+	gl = config --global -l
 [core]
 	pager = less -FRX
 [fetch]
