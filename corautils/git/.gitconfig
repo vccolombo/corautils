@@ -8,6 +8,19 @@
 	gl = config --global -l
 	last = log -1 HEAD --stat
 	pr = pull --rebase=merges --autostash
+	done = push origin HEAD
+	del = branch -d
+	co = checkout
+	cob = checkout -b
+	d = diff
+	ds = diff --stat
+    dc = diff --cached
+	a = add -p
+	all = add -A
+	cm = commit -m
+	cam = commit -a -m
+	amend = commit --amend --verbose
+	rao = remote add origin
 [core]
 	pager = less -FRX
 [fetch]
