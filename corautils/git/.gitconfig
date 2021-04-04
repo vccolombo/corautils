@@ -3,7 +3,7 @@
 	name = Victor Colombo
 [alias]
 	uncommit = reset HEAD^
-	lg = log --abbrev-commit -30 --graph --pretty=format:\"%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)%Creset %C(bold blue)[%an]%Creset\"
+	lg = log --graph --pretty=format:\"%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)%Creset %C(bold blue)[%an]%Creset\"
 	st = status -sb
 	gl = config --global -l
 	last = log -1 HEAD --stat
@@ -19,7 +19,7 @@
 	all = add -A
 	cm = commit -m
 	cam = commit -a -m
-	amend = commit --amend --verbose
+	amend = commit -a --amend --verbose
 	rao = remote add origin
 [core]
 	pager = less -FRX
