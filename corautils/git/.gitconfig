@@ -2,6 +2,7 @@
 	; email = 
 	name = Victor Colombo
 [alias]
+	undo = reset HEAD^
 	lg = log --graph --pretty=format:\"%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)%Creset %C(bold blue)[%an]%Creset\"
 	s = status -sb
 	last = log -1 HEAD --stat
@@ -18,7 +19,7 @@
 	cam = commit -a -m
 	amend = commit -a --amend --verbose
 	save = !git add -A && git commit -m "WIP"
-	undo = reset HEAD^
+	res = reset --hard HEAD
 	d = diff
 	ds = diff --stat
     dc = diff --cached
