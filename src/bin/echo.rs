@@ -5,10 +5,21 @@ use clap::Parser;
 struct Cli {
     #[clap(value_name = "STRING", multiple_values = true)]
     string: Vec<String>,
+
+    #[clap(
+        short = 'n',
+        help = "Do not output the trailing newline",
+        takes_value = false
+    )]
+    omit_newline: bool,
 }
 
 fn main() {
     let cli = Cli::parse();
 
-    println!("{}", cli.string.join(" "));
+    print!(
+        "{}{}",
+        cli.string.join(" "),
+        if cli.omit_newline { "" } else { "\n" }
+    );
 }
