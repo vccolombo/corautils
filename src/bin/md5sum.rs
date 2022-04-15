@@ -1,5 +1,7 @@
 use std::{env, fs};
 
+// super slow, needs to be redone using ssl probably
+
 struct Md5Result(String);
 
 impl Md5Result {
