@@ -7,5 +7,5 @@ authors = ["Víctor Colombo <victorcora98@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-md5 = "0.7.0"
+md5-core = "0.1.0"
 clap = { version = "3.1", features = [ "derive" ] }

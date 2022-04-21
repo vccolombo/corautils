@@ -60,7 +60,7 @@ name = "corautils"
 version = "0.1.0"
 dependencies = [
  "clap",
- "md5",
+ "md5-core",
 ]
 
 [[package]]
@@ -107,10 +107,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "efaa7b300f3b5fe8eb6bf21ce3895e1751d9665086af2d64b42f19701015ff4f"
 
 [[package]]
-name = "md5"
-version = "0.7.0"
+name = "md5-core"
+version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "490cc448043f947bae3cbee9c203358d62dbee0db12107a74be5c30ccfd09771"
+checksum = "5662d3f504a0ebc0387877ec098a06baeed5f9644b55c3e3f96e347ed26f35f1"
 
 [[package]]
 name = "memchr"

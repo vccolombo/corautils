@@ -1,6 +1,6 @@
 use std::{env, fs};
 
-// super slow, needs to be redone using ssl probably
+use md5_core::md5_core::Md5;
 
 struct Md5Result(String);
 
@@ -19,7 +19,7 @@ impl Md5Result {
 }
 
 fn calculate_md5(data: &[u8]) -> Md5Result {
-    let digest: md5::Digest = md5::compute(data);
+    let digest = Md5::calculate(data);
     let result = Md5Result::new(format!("{:x}", digest));
 
     result
